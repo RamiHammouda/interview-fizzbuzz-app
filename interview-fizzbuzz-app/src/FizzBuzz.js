@@ -1,19 +1,7 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => {
-  for (var i = 1; i <= 100; i++) {
-    console.log(solve(i));
-  }
-});
-
-app.listen(port, () => {
-  for (var i = 1; i <= 100; i++) {
-    console.log(solve(i));
-  }
-});
-
+//This function take a number as its paramemter
+//It will return fizz if i is multiple by 3
+//It will return buzz if i is multiple by 3
+//It will return fizzBuzz if i is multiple by 3 and 5
 function solve(i) {
   return i % 3 == 0
     ? i % 5 == 0
@@ -24,4 +12,4 @@ function solve(i) {
     : i;
 }
 
-module.exports.solve = solve;
+module.exports.solve = solve; //export the solve function to the modules

@@ -1,19 +1,27 @@
-const sum = require('../FizzBuzz');
+const sum = require('../FizzBuzz'); //require used to include external modules from FizzBuzz
 
-test('the number is 8 should return 8', () => {
+test('for numbers "8,13,22" non multiple by three and five print the number', () => {
   expect(sum.solve(8)).toEqual(8);
+  expect(sum.solve(13)).toEqual(13);
+  expect(sum.solve(22)).toEqual(22);
 });
 
-test('the number is 3 should return fizz', () => {
+test('for numbers "3,9,18" multiples of three print "Fizz" instead of the number', () => {
   expect(sum.solve(3)).toEqual('Fizz');
+  expect(sum.solve(9)).toEqual('Fizz');
+  expect(sum.solve(18)).toEqual('Fizz');
 });
 
-test('the number is 20 should return "buzz"', () => {
+test('for numbers "20,40,65" multiples of five print "Buzz" instead of the number', () => {
   expect(sum.solve(20)).toEqual('Buzz');
+  expect(sum.solve(40)).toEqual('Buzz');
+  expect(sum.solve(65)).toEqual('Buzz');
 });
 
-test('the number is 15 should return "fizzbuzz"', () => {
+test('for numbers "15,45,90"  multiples of both three and five print "FizzBuzz”', () => {
   expect(sum.solve(15)).toEqual('FizzBuzz');
+  expect(sum.solve(45)).toEqual('FizzBuzz');
+  expect(sum.solve(90)).toEqual('FizzBuzz');
 });
 
 // for (var i = 0; i < 100; i++) {

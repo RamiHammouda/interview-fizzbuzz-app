@@ -1,6 +1,6 @@
 //This function take a number as its paramemter
 //It will return fizz if i is multiple by 3
-//It will return buzz if i is multiple by 3
+//It will return buzz if i is multiple by 5
 //It will return fizzBuzz if i is multiple by 3 and 5
 function solve(i) {
   return i % 3 == 0
